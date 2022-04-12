@@ -7,4 +7,5 @@ module.exports = app => {
   app.route('/aluno').post(controller.insert);
   app.route('/aluno/:id').put(controller.update);
   app.route('/aluno/:id').delete(controller.delete);
+  app.route('/login').post(controller.login);
 }

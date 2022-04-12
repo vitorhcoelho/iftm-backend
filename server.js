@@ -3,7 +3,7 @@ const port = app.get('port');
 
 const database = require('./config/database');
 
-async function createProductsTable() {
+async function createAlunosTable() {
   try {
     const resultado = await database.sync();
   } catch (error) {
@@ -12,11 +12,10 @@ async function createProductsTable() {
 }
 
 database.authenticate()
-  .then(createProductsTable)
+  .then(createAlunosTable)
   .catch(err => console.log("Error...:", err))
 
 
-// RODANDO NOSSA APLICAÇÃO NA PORTA SETADA
 app.listen(port, () => {
   console.log(`Servidor rodando na porta ${port}`)
 });
